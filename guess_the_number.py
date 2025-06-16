@@ -1,3 +1,11 @@
+"""
+This script accepts the lower bound and upper bound values from the user.
+Once the values are entered, a Random value is generated. 
+The user has 10 chances to guess the number. 
+If user manages to guess the number in 10 chances, Wins
+Else, Loses
+"""
+
 import random
 
 lower_bound = int(input("Enter the lower bound value: "))
@@ -17,7 +25,11 @@ while count < 10:
     if usr_input == random_value:
         print(f"Bingo!! You guessed it right in your {count} attempt!!")
         break
+    elif count == 10:
+        print(f"You have exhausted the chances. You Lost!!")
+        break
     else:
         continue
+        
 
     
